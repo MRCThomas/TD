@@ -1,18 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
+import NotificationButton from './NotificationButton';
 
 function NotificationComponent({ content, type }) {
-  const [visible, setVisible] = React.useState(true);
+  const [visible, setVisible] = useState(true);
 
-  const displayCloseBtn = () => {
+  const handleClick = () => {
     setVisible(false);
   };
 
-  
+
   return (
     <>
       {visible && (
         <div className={`notification ${type}`}>
-          <button className="delete" onClick={displayCloseBtn}></button>
+          <NotificationButton handleClick = {handleClick} displayCloseBtn={true} />
           <p>{content}</p>
         </div>
       )}

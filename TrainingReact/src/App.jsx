@@ -6,28 +6,15 @@ function App() {
 
     return (
         <>
-            <WrapperComponent />
-            <div className='container'>
+            <WrapperComponent className='container' >
                 <div className='columns'>
                     <div className="column">
                         <NotificationComponent type="is-danger" content="Je suis un message d'alerte" />
+                        <NotificationComponent type="is-success" content="Je suis un message de succès" />
+                        <NotificationComponent type="is-warning" content="Je suis un message d'avertissement" />
                     </div>
                 </div>
-            </div>
-            <div className='container'>
-                <div className='columns'>
-                    <div className="column">
-                    <NotificationComponent type="is-warning" content="Je suis un message d'avertissement" />
-                    </div>
-                </div>
-            </div>
-            <div className='container'>
-                <div className='columns'>
-                <div className="column">
-                    <NotificationComponent type="is-success" content="Je suis un message de succès" />
-                </div>
-                </div>
-            </div>
+            </WrapperComponent >
         </>
     )
 }
